@@ -1,0 +1,274 @@
+/* Category area */
+
+
+/* arrumar */
+.main-category-area {
+    padding: 4.5em 6em 3em;
+    gap:35px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-color:rgb(26, 4, 46);
+}
+
+.main-category-card {
+    width: 9.375em;
+    height: 8.75em;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.main-category-card img{
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 100%;
+    transition: transform 0.3s ease;
+}
+
+.main-category-card h4 {
+    font-weight: 400;
+    margin:0;
+    line-height: 1.5em;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.main-category-card .category-link{
+    text-decoration: none;
+    color: #fff;
+}
+
+.main-category-card:hover {
+    transform: scale(1.05); 
+}
+
+.main-category-card:hover .category-img {
+    transform: scale(1.1); 
+}
+  
+
+/* product-section */
+
+
+.section-product {
+    padding: 3.125em 0;
+    position: relative;
+}
+
+.section-product-carrousel {
+    
+    padding-top: 3.125em;
+    position: relative;
+    overflow: hidden;
+}
+
+.carrousel {
+    display: flex;
+    transition: transform 0.5s ease;
+    column-gap: 16px;
+}
+
+
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    color: rgb(23, 23, 23);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 32px;
+  }
+  
+  .prev {
+    left: -70px;
+  }
+  
+  .next {
+    right: -70px;
+  }
+
+  @media (max-width: 576px) {
+
+    .prev, .next {
+        display: none;
+    }
+
+
+
+
+    .main-category-area {
+        padding: 20px 0px;
+        gap: 30px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+    }
+
+    .main-category-card {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .main-category-card img{
+        width: 100%;
+        /* height: 140px; */
+        object-fit: contain;
+    }
+
+    .main-category-card h4 {
+        font-weight: 400;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+  
+
+    
+   
+
+
+
+}
+
+/* Estilo parte dos mimos  */
+
+.grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    height: 550px; 
+    align-items: stretch;
+}
+
+.item {
+    position: relative;
+    overflow: hidden; 
+}
+
+.item img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease; 
+}
+
+.item:hover img {
+    transform: scale(1.1); 
+}
+
+/* Imagem grande à esquerda ocupa duas linhas e uma coluna */
+.item-large {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+/* As demais imagens ocupam as colunas 2 e 3 nas duas linhas */
+.item:nth-child(2) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.item:nth-child(3) {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+
+.item:nth-child(4) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.item:nth-child(5) {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+
+/* Sessão de cadastro  */
+
+.cadastro-section {
+    margin-top: 50px;
+    background-color:  rgb(52, 14, 88);
+    color: white;
+    padding: 110px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cadastro-content {
+    max-width: 1400px;
+    width: 100%;
+    text-align: left;
+}
+
+.cadastro-form {
+    display: flex;
+    gap: 10px; 
+}
+
+.cadastro-form input[type="text"],
+.cadastro-form input[type="email"] {
+    padding: 15px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.cadastro-form button {
+    padding: 15px 25px;
+    font-size: 1em;
+    color: #C8102E;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cadastro-form button:hover {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.cadastro-content p {
+    font-size: 1em;
+    margin-bottom: 30px;
+}
+
+/* Icone flutuante  */
+
+.content {
+    padding: 20px;
+}
+
+.round-image {
+    position: fixed;
+    bottom: 20px;
+    right: 20px; /* Altera a posição para a direita */
+    width: 60px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: 60px; /* Ajuste o tamanho da imagem conforme necessário */
+    border-radius: 50%; /* Faz a imagem ser redonda */
+    overflow: hidden;
+}
+
+.round-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Para garantir que a imagem se ajuste bem no círculo */
+}
+
+
+
+
+
